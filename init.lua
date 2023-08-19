@@ -182,6 +182,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 
 vim.wo.scrolloff = 8
+vim.wo.colorcolumn = '80'
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
