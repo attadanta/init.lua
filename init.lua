@@ -55,7 +55,15 @@ require('lazy').setup({
   },
 
   {
-    -- Adds git related signs to the gutter, as well as utilities for managing changes
+    "RRethy/nvim-base16",
+    config = function()
+      vim.cmd.colorscheme "base16-ayu-dark"
+    end
+  },
+
+  {
+    -- Adds git related signs to the gutter, as well as utilities for managing
+    -- changes
     'lewis6991/gitsigns.nvim',
     opts = {
       -- See `:help gitsigns.txt`
@@ -148,8 +156,6 @@ require('lazy').setup({
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
-
-vim.cmd.colorscheme 'torte'
 
 -- Set highlight on search
 vim.o.hlsearch = false
