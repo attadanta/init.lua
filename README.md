@@ -14,7 +14,7 @@ Backup your existing configuration and clone the repository under
 git clone https://github.com/attadanta/init.lua ~/.config/nvim
 ```
 
-Additionally, I installed the recommended dependencies `ripgrep` and `fzf`:
+Additionally, I installed the recommended dependencies `rg` and `fzf`:
 
 ```bash
 brew install ripgrep
