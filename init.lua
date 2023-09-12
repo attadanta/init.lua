@@ -55,9 +55,9 @@ require('lazy').setup({
   },
 
   {
-    "RRethy/nvim-base16",
-    config = function()
-      vim.cmd.colorscheme "base16-ayu-dark"
+    "EdenEast/nightfox.nvim",
+    config = function ()
+      vim.cmd.colorscheme "carbonfox"
     end
   },
 
@@ -161,11 +161,11 @@ require('lazy').setup({
 vim.o.hlsearch = false
 
 -- Make line numbers default
-vim.wo.number = true
-vim.wo.relativenumber = true
+vim.o.number = true
+vim.o.relativenumber = true
 
-vim.wo.scrolloff = 8
-vim.wo.colorcolumn = '80'
+vim.o.scrolloff = 8
+vim.o.colorcolumn = '80'
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
