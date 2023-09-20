@@ -380,6 +380,7 @@ local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
   tsserver = {},
+  eslint = {},
   html = { filetypes = { 'html', 'twig', 'hbs'} },
 
   lua_ls = {
