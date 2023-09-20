@@ -55,9 +55,27 @@ require('lazy').setup({
   },
 
   {
-    "EdenEast/nightfox.nvim",
+    "rebelot/kanagawa.nvim",
     config = function ()
-      vim.cmd.colorscheme "carbonfox"
+      require('kanagawa').setup({
+        dimInactive = false,
+        transparent = true,
+        theme = "dragon",
+        background = {
+          dark = "dragon",
+          light = "lotus"
+        },
+        colors = {
+          theme = {
+            all = {
+              ui = {
+                bg_gutter = "none"
+              }
+            }
+          }
+        }
+      })
+      vim.cmd.colorscheme "kanagawa"
     end
   },
 
