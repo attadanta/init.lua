@@ -76,6 +76,8 @@ require('lazy').setup({
         }
       })
       vim.cmd.colorscheme "kanagawa"
+      vim.cmd 'highlight TelescopeBorder guibg=none'
+      vim.cmd 'highlight TelescopeTitle guibg=none'
     end
   },
 
