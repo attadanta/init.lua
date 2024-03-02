@@ -169,15 +169,41 @@ require('lazy').setup {
         topdelete = { text = '‾' },
         changedelete = { text = '~' },
       },
-    },
-    on_attach = function(bufnr)
-      local gs = require 'gitsigns'
+      on_attach = function(bufnr)
+        local gs = package.loaded.gitsigns
+        local function map(mode, l, r, opts)
+          opts = opts or {}
+          opts.buffer = bufnr
+          vim.keymap.set(mode, l, r, opts)
+        end
 
-      vim.keymap.set('n', '<leader>gp', gs.prev_hunk, { buffer = bufnr, desc = '[G]o to [P]revious Hunk' })
-      vim.keymap.set('n', '<leader>gn', gs.next_hunk, { buffer = bufnr, desc = '[G]o to [N]ext Hunk' })
-      vim.keymap.set('n', '<leader>ph', gs.preview_hunk, { buffer = bufnr, desc = '[P]review [H]unk' })
-      vim.keymap.set('n', '<leader>rh', gs.reset_hunk, { buffer = bufnr, desc = '[R]eset [H]unk' })
-    end,
+        -- Navigation
+        map('n', ']c', function()
+          if vim.wo.diff then
+            return ']c'
+          end
+          vim.schedule(function()
+            gs.next_hunk()
+          end)
+          return '<Ignore>'
+        end, { expr = true, desc = 'Next hunk' })
+
+        map('n', '[c', function()
+          if vim.wo.diff then
+            return '[c'
+          end
+          vim.schedule(function()
+            gs.prev_hunk()
+          end)
+          return '<Ignore>'
+        end, { expr = true, desc = 'Previous hunk' })
+
+        -- Actions
+        map('n', '<leader>tb', gs.toggle_current_line_blame, { buffer = bufnr, desc = '[T]oggle current line [B]lame' })
+        map('n', '<leader>hp', gs.preview_hunk, { buffer = bufnr, desc = '[H]unk [P]review' })
+        map('n', '<leader>hr', gs.reset_hunk, { buffer = bufnr, desc = '[H]unk [R]eset' })
+      end,
+    },
   },
   -- NOTE: Plugins can also be configured to run lua code when they are loaded.
   --
