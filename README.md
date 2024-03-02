@@ -21,3 +21,5 @@ brew install ripgrep
 brew install fzf
 ```
 
+Having a [nerdfont](https://www.nerdfonts.com/) will let you display nice icons
+in the status line. I use JetBrainsMono.
