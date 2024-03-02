@@ -157,15 +157,15 @@ require('lazy').setup {
       },
     },
     on_attach = function(bufnr)
-      local signs = require 'gitsigns'
+      local gs = require 'gitsigns'
 
-      vim.keymap.set('n', '<leader>gp', signs.prev_hunk, { buffer = bufnr, desc = '[G]o to [P]revious Hunk' })
-      vim.keymap.set('n', '<leader>gn', signs.next_hunk, { buffer = bufnr, desc = '[G]o to [N]ext Hunk' })
-      vim.keymap.set('n', '<leader>ph', signs.preview_hunk, { buffer = bufnr, desc = '[P]review [H]unk' })
-      vim.keymap.set('n', '<leader>rh', signs.reset_hunk, { buffer = bufnr, desc = '[R]eset [H]unk' })
+      vim.o.background = 'dark'
+      vim.keymap.set('n', '<leader>gp', gs.prev_hunk, { buffer = bufnr, desc = '[G]o to [P]revious Hunk' })
+      vim.keymap.set('n', '<leader>gn', gs.next_hunk, { buffer = bufnr, desc = '[G]o to [N]ext Hunk' })
+      vim.keymap.set('n', '<leader>ph', gs.preview_hunk, { buffer = bufnr, desc = '[P]review [H]unk' })
+      vim.keymap.set('n', '<leader>rh', gs.reset_hunk, { buffer = bufnr, desc = '[R]eset [H]unk' })
     end,
   },
-
   -- NOTE: Plugins can also be configured to run lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
