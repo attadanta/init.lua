@@ -11,7 +11,6 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
--- Make line numbers default
 vim.o.number = true
 vim.o.relativenumber = true
 
