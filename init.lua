@@ -1,5 +1,5 @@
 -- [[ Setting options ]]
--- To see what an option does, run `:help '<option>'` (with the quotes), e.g. `:help 'scrolloff'`.
+-- See`:help '<option>'` (with the quotes), e.g. `:help 'scrolloff'`.
 -- For the full list of options, see `:help option-list`.
 
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
