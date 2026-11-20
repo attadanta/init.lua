@@ -9,6 +9,7 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
+vim.opt.wrap = false
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.shiftwidth = 4
@@ -34,6 +35,9 @@ vim.opt.scrolloff = 10
 vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
+
+-- [[ Colorscheme ]]
+vim.cmd.colorscheme 'catppuccin'
 
 do
   -- [[ Basic Keymaps ]]
