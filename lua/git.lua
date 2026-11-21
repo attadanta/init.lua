@@ -8,8 +8,6 @@ vim.pack.add {
 }
 
 -- [[ Fugitive ]]
--- See `:help fugitive`. In the `:Git` status window press `g?` for its mappings
--- (s = stage, u = unstage, = = inline diff, cc = commit, dv = vertical diff, ...).
 vim.keymap.set('n', '<leader>gs', '<cmd>Git<CR>', { desc = '[G]it [s]tatus (fugitive)' })
 vim.keymap.set('n', '<leader>gc', '<cmd>Git commit<CR>', { desc = '[G]it [c]ommit' })
 vim.keymap.set('n', '<leader>gp', '<cmd>Git push<CR>', { desc = '[G]it [p]ush' })
