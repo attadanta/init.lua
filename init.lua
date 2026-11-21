@@ -280,8 +280,6 @@ do
       -- or a suggestion from your LSP for this to activate.
       map('gra', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
 
-      -- WARN: This is not Goto Definition, this is Goto Declaration.
-      --  For example, in C this would take you to the header.
       map('grD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
       local client = vim.lsp.get_client_by_id(event.data.client_id)
