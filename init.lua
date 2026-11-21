@@ -37,7 +37,7 @@ vim.schedule(function()
 end)
 
 -- [[ Colorscheme ]]
-vim.cmd.colorscheme 'catppuccin'
+vim.cmd.colorscheme 'quiet'
 
 do
   -- [[ Basic Keymaps ]]
