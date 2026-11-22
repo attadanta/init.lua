@@ -1,6 +1,7 @@
--- [[ Colors ]]
--- Built-in `default` colorscheme without its background,
+--- Colorscheme setup.
+-- Uses the built-in `default` colorscheme without its background,
 -- so the terminal emulator's background shows through.
+-- @module colors
 
 vim.api.nvim_create_autocmd('ColorScheme', {
   group = vim.api.nvim_create_augroup('colors-transparent-background', { clear = true }),

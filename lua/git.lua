@@ -1,6 +1,7 @@
--- [[ Git ]]
+--- Git integration.
 -- vim-fugitive: `:Git` (status/commit/push/etc.), blame, diffs, log.
 -- gitsigns.nvim: gutter signs, hunk staging/preview, inline blame.
+-- @module git
 
 vim.pack.add {
   'https://github.com/tpope/vim-fugitive',
