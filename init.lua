@@ -37,8 +37,7 @@ vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
 
--- [[ Colorscheme ]]
-vim.cmd.colorscheme 'quiet'
+require 'colors'
 
 do
   -- [[ Basic Keymaps ]]
