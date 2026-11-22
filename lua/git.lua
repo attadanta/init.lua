@@ -79,5 +79,3 @@ gitsigns.setup {
     vim.keymap.set({ 'o', 'x' }, 'ih', gitsigns.select_hunk, { desc = 'text object [i]nside [h]unk', buf = bufnr })
   end,
 }
-
--- vim: ts=2 sts=2 sw=2 et
